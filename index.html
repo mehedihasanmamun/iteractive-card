@@ -1,0 +1,121 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="shortcut icon"
+      href="favicon-32x32.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Interactive Card Details Form | Frontend Mentor Challenge</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="left">
+        <div class="front-card-container">
+          <img
+            src="card-logo.svg"
+            alt="Card Logo"
+            class="front-card-logo"
+          />
+          <div class="front-card">
+            <img
+              src="bg-card-front.png"
+              alt="Front Card Background"
+              class="card-bg"
+            />
+            <h1 class="card-number">0000 0000 0000 0000</h1>
+            <div class="card-info-front">
+              <span class="name">MAMUN MEHEDI</span>
+              <span class="date"
+                ><span class="card-month">00</span>/<span class="card-year"
+                  >00</span
+                ></span
+              >
+            </div>
+          </div>
+        </div>
+        <div class="back-card-container">
+          <img
+            src="bg-card-back.png"
+            alt="Back Card Background"
+            class="card-bg"
+          />
+          <span class="cvc">000</span>
+        </div>
+      </div>
+      <div class="right">
+        <form class="form" onsubmit="return false">
+          <div class="cardholder-name-container">
+            <label for="name">CARDHOLDER NAME</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="e.g. Mamun Mehedi"
+              required
+            />
+          </div>
+          <div class="card-number-container">
+            <label for="number">CARD NUMBER</label>
+            <input
+              type="number"
+              id="number"
+              minlength="16"
+              maxlength="16"
+              placeholder="e.g. 1234 5678 9123 0000"
+              required
+            />
+          </div>
+          <div class="label-container">
+            <label for="expdate">EXP. DATE (MM/YY)</label>
+            <label for="card-cvc">CVC</label>
+          </div>
+          <div class="input-container">
+            <input
+              type="number"
+              id="expdate"
+              minlength="2"
+              maxlength="2"
+              placeholder="MM"
+              required
+            />
+            <input
+              type="number"
+              id="expdate-year"
+              minlength="2"
+              maxlength="2"
+              placeholder="YY"
+              required
+            />
+            <input
+              type="number"
+              id="card-cvc"
+              minlength="3"
+              maxlength="3"
+              placeholder="e.g. 123"
+              required
+            />
+          </div>
+          <button class="submit-btn">Confirm</button>
+        </form>
+      </div>
+      <div class="completed-state">
+        <img src="icon-complete.svg" alt="Tick Logo" />
+        
+        
+        <button type="submit" class="submit-btn">Confirm</button>
+      </div>
+    </div>
+    
+  </body>
+</html>
